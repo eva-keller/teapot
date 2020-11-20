@@ -1,0 +1,44 @@
+<!-- your html file: -->
+<html>
+<head>
+    
+</head>
+<body>
+    <h1>
+      THE TITLE OF YOUR WEBPAGE
+    </h1>
+    <div id="container"></div>
+</body>
+<script>
+    const container = document.querySelector('#container');     // we get a reference to the container div that already exists in our HTML.
+    const content = document.createElement('div');              // Then we create a new div and store it in the variable content
+    content.classList.add('content');                           //We add a class and some text to the content div
+    content.textContent = 'This is the glorious text-content!';
+    container.appendChild(content);                             //finally append that div to container
+
+    //a <p> with red text that says “Hey I’m red!”
+    const paragraph = document.createElement('p');
+    paragraph.classList.add('paragraph');
+    paragraph.textContent = "Hey I'm red!";
+    paragraph.style.color = 'red';
+    container.appendChild(paragraph);
+
+    //an <h3> with blue text that says “I’m a blue h3!”
+    const h3 =document.createElement('h3');
+    h3.classList.add('h3');
+    h3.textContent = "I'm a blue h3.";
+    h3.style.color = 'blue';
+    container.appendChild(h3);
+
+    //a <div> with a black border and pink background color with the following elements inside of it
+    const anotherDiv = document.createElement('div');
+    anotherDiv.classList.add('anotherDiv');
+    anotherDiv.setAttribute('style', 'border-color: black; background: pink');
+    container.appendChild(anotherDiv); 
+    //another <h1> that says “I’m in a div”
+    //a <p> that says “ME TOO!”
+    //after creating the div with createElement, append the <h1> and <p> to it before adding it to the container.
+    
+
+</script>
+</html>
